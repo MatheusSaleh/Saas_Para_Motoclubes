@@ -4,6 +4,7 @@ import com.mc.saas.domain.member.Member;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Getter
@@ -16,9 +17,9 @@ public class Payment {
 
     private LocalDate paymentDate;
 
-    private String MonthYearReference;
+    private String monthYearReference;
 
-    private Double amount;
+    private BigDecimal amount;
 
     private String paymentMethod;
 
@@ -26,18 +27,18 @@ public class Payment {
 
     private LocalDate dueDate;
 
-    public Payment(Long id, Member member, LocalDate paymentDate, String monthYearReference, Double amount, String paymentMethod, String paymentStatus, LocalDate dueDate) {
+    public Payment(Long id, Member member, LocalDate paymentDate, String monthYearReference, BigDecimal amount, String paymentMethod, String paymentStatus, LocalDate dueDate) {
         this.id = id;
         this.member = member;
         this.paymentDate = paymentDate;
-        MonthYearReference = monthYearReference;
+        this.monthYearReference = monthYearReference;
         this.amount = amount;
         this.paymentMethod = paymentMethod;
         this.paymentStatus = paymentStatus;
         this.dueDate = dueDate;
     }
 
-    public static Payment create(Member member, LocalDate paymentDate, String monthYearReference, Double amount, String paymentMethod, String paymentStatus, LocalDate dueDate) {
+    public static Payment create(Member member, LocalDate paymentDate, String monthYearReference, BigDecimal amount, String paymentMethod, String paymentStatus, LocalDate dueDate) {
         return new Payment(null, member, paymentDate, monthYearReference, amount, paymentMethod, paymentStatus, dueDate);
     }
 }
