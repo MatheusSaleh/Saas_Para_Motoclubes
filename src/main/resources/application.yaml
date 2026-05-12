@@ -3,9 +3,9 @@ spring:
     name: MotoClubeSaas
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/motoclube
-    username: postgres
-    password: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: saleh
+    password: sagi
 
   jpa:
     hibernate:

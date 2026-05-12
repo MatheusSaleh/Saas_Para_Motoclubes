@@ -2,10 +2,12 @@ package com.mc.saas.infrastructure.persistence.people;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "pessoa")
 @Getter
+@Setter
 public class PeopleJpaEntity {
 
     @Id

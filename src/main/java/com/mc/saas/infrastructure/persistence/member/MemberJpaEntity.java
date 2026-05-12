@@ -3,10 +3,12 @@ package com.mc.saas.infrastructure.persistence.member;
 import com.mc.saas.infrastructure.persistence.people.PeopleJpaEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "membro")
 @Getter
+@Setter
 public class MemberJpaEntity {
 
     @Id

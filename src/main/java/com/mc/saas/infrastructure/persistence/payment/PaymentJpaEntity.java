@@ -3,6 +3,7 @@ package com.mc.saas.infrastructure.persistence.payment;
 import com.mc.saas.infrastructure.persistence.member.MemberJpaEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -10,6 +11,7 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "pagamento")
 @Getter
+@Setter
 public class PaymentJpaEntity {
 
     @Id
