@@ -19,3 +19,12 @@ spring:
   flyway:
     enabled: true
     baseline-on-migrate: true
+
+security:
+  jwt:
+    secret: ${JWT_SECRET:troque-este-segredo-em-producao-precisa-ter-no-minimo-32-caracteres}
+    expiration-ms: ${JWT_EXPIRATION_MS:28800000}
+  bootstrap:
+    admin-email: ${ADMIN_EMAIL:admin@motoclube.com}
+    admin-password: ${ADMIN_PASSWORD:admin123}
+    admin-name: ${ADMIN_NAME:Administrador}
